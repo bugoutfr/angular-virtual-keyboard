@@ -1,0 +1,12 @@
+<div class="clavier-virtuel" *ngIf="isVisible" tabindex="0">
+  <div class="clavier-row" *ngFor="let row of currentLayout">
+    <button
+      class="clavier-key"
+      *ngFor="let key of row"
+      (click)="onKeyPress(key)"
+      (blur)="onKeyBlur($event)"
+    >
+      {{ key }}
+    </button>
+  </div>
+</div>
