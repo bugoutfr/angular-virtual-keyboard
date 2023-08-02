@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ClavierVirtuelComponent } from './clavier-virtuel.component';
+import { VirtualKeyboardComponent } from './virtual-keyboard.component';
 
 describe('ClavierVirtuelComponent', () => {
-  let component: ClavierVirtuelComponent;
-  let fixture: ComponentFixture<ClavierVirtuelComponent>;
+  let component: VirtualKeyboardComponent;
+  let fixture: ComponentFixture<VirtualKeyboardComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ClavierVirtuelComponent ]
+      declarations: [ VirtualKeyboardComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ClavierVirtuelComponent);
+    fixture = TestBed.createComponent(VirtualKeyboardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

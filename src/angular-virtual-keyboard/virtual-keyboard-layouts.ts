@@ -1,7 +1,7 @@
 // clavier-layouts.ts
-import { ClavierLayout } from './clavier-layout.interface';
+import { VirtualKeyboardLayout } from './virtual-keyboard-layout.interface';
 
-export const clavierLayouts: ClavierLayout[] = [
+export const VirtualKeyboardLayouts: VirtualKeyboardLayout[] = [
   {
     lang: 'en',
     layout: [

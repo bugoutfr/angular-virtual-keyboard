@@ -7,14 +7,14 @@ import {
   Input,
   Output,
 } from '@angular/core';
-import { clavierLayouts } from './clavier-layouts';
+import { VirtualKeyboardLayouts } from './virtual-keyboard-layouts';
 
 @Component({
-  selector: 'app-clavier-virtuel',
-  templateUrl: './clavier-virtuel.component.html',
-  styleUrls: ['./clavier-virtuel.component.scss'],
+  selector: 'ng-virtual-keyboard',
+  templateUrl: './virtual-keyboard.component.html',
+  styleUrls: ['./virtual-keyboard.component.scss'],
 })
-export class ClavierVirtuelComponent {
+export class VirtualKeyboardComponent {
   @Input() language: string = 'en';
   @Output() inputChange: EventEmitter<string> = new EventEmitter<string>();
   @Output() blur: EventEmitter<FocusEvent> = new EventEmitter<FocusEvent>();
@@ -33,11 +33,11 @@ export class ClavierVirtuelComponent {
   constructor(private elementRef: ElementRef) {}
 
   get currentLayout(): string[][] {
-    const layout = clavierLayouts.find(
+    const layout = VirtualKeyboardLayouts.find(
       (layout) => layout.lang === this.language
     );
 
-    return layout?.layout ?? clavierLayouts[0].layout;
+    return layout?.layout ?? VirtualKeyboardLayouts[0].layout;
   }
 
   @HostBinding('style.display') get display(): string {
@@ -62,7 +62,7 @@ export class ClavierVirtuelComponent {
     console.log('Key pressed', key);
     if (this.focusedInputElement) {
       if (
-        ClavierVirtuelComponent.inputsWithSelection.indexOf(
+        VirtualKeyboardComponent.inputsWithSelection.indexOf(
           this.focusedInputElement.type
         ) === -1
       ) {
