@@ -3,18 +3,17 @@ import {
   ElementRef,
   EventEmitter,
   HostBinding,
-  HostListener,
   Input,
   Output,
 } from '@angular/core';
-import { VirtualKeyboardLayouts } from './virtual-keyboard-layouts';
+import { VirtualKeyboardLayouts } from './angular-virtual-keyboard-layouts';
 
 @Component({
   selector: 'ng-virtual-keyboard',
-  templateUrl: './virtual-keyboard.component.html',
-  styleUrls: ['./virtual-keyboard.component.scss'],
+  templateUrl: './angular-virtual-keyboard.component.html',
+  styleUrls: ['./angular-virtual-keyboard.component.scss'],
 })
-export class VirtualKeyboardComponent {
+export class AngularVirtualKeyboardComponent {
   @Input() language: string = 'en';
   @Output() inputChange: EventEmitter<string> = new EventEmitter<string>();
   @Output() blur: EventEmitter<FocusEvent> = new EventEmitter<FocusEvent>();
@@ -62,7 +61,7 @@ export class VirtualKeyboardComponent {
     console.log('Key pressed', key);
     if (this.focusedInputElement) {
       if (
-        VirtualKeyboardComponent.inputsWithSelection.indexOf(
+        AngularVirtualKeyboardComponent.inputsWithSelection.indexOf(
           this.focusedInputElement.type
         ) === -1
       ) {

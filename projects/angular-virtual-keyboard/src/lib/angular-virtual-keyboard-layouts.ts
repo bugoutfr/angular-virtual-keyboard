@@ -1,5 +1,5 @@
 // clavier-layouts.ts
-import { VirtualKeyboardLayout } from './virtual-keyboard-layout.interface';
+import { VirtualKeyboardLayout } from './angular-virtual-keyboard-layout.interface';
 
 export const VirtualKeyboardLayouts: VirtualKeyboardLayout[] = [
   {
