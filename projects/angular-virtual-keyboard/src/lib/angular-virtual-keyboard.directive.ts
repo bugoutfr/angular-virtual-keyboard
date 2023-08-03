@@ -1,6 +1,5 @@
 import {
   ApplicationRef,
-  ComponentFactoryResolver,
   ComponentRef,
   Directive,
   ElementRef,
@@ -8,7 +7,6 @@ import {
   Input,
   OnDestroy,
   OnInit,
-  ViewContainerRef,
   createComponent,
 } from '@angular/core';
 import { AngularVirtualKeyboardComponent } from './angular-virtual-keyboard.component';
